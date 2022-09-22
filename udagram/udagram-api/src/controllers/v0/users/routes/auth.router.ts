@@ -99,7 +99,6 @@ router.post('/', async (req: Request, res: Response) => {
 
   const generatedHash = await generatePassword(plainTextPassword);
 
-  //@ts-ignore
   const newUser = await new User({
     email: email,
     passwordHash: generatedHash,
