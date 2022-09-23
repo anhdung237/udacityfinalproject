@@ -52,6 +52,11 @@ jobs:
       - aws-cli/setup
       - checkout
       - run:
+          name: Pass secrets from CircleCI to EB
+          command: |
+            cd udagram/udagram-api
+            eb setenv AWS_BUCKET=$AWS_BUCKET AWS_PROFILE=$AWS_PROFILE AWS_REGION=$AWS_REGION JWT_SECRET=$JWT_SECRET PORT=$PORT POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME
+      - run:
           name: Deploy App
           command: |
             npm run deploy
