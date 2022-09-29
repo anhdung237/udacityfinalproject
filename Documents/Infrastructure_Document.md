@@ -24,7 +24,7 @@ Table contents:
 - Bucket: elasticbeanstalk-us-east-1-466850583282
 - Static website hosting: Enable
 - Index document: index.html
-- Website: `http://elasticbeanstalk-us-east-1-466850583282.s3-website-us-east-1.amazonaws.com/home`
+- Website: `http://elasticbeanstalk-us-east-1-466850583282.s3-website-us-east-1.amazonaws.com`
 - Bucket policy:
 ```
 {
